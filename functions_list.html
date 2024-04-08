@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="jquery_mobile/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="pageBody">
+<div id="functionsList"  data-role="page">
+  <div data-role="header">
+    <div class="page_header">
+      <div class="header_logo"><img src="images/cals_logo.png" alt="Прикладная логистика"></div>
+      <div class='header_text'>Перечень функций системы</div>
+    </div>
+  </div><!-- /header -->
+  <div role="main">
+    <div id='btnsGrid' class="table_row">
+      <div class='table_row_cell_block'><input type="button" id="generateFunctionsList" onclick='GenerateFunctions()' data-inline="true"  data-iconpos="left" data-icon="cloud" value="Генерировать функции"></div>
+      <div class='table_row_cell_block'><span id="functionsListUpdateStatus"></span></div>
+      <div class="table_row">
+        <div class='table_row_cell table_row_cell_id'>
+          Ключ Yandex API
+        </div>
+        <div class='table_row_cell table_row_cell_connect_param_value' >
+          <input type="text" name="generate_dlg_API_key" id="generate_dlg_API_key" data-mini="true" value="">
+        </div>
+      </div>
+      <div class="table_row">
+        <div class='table_row_cell table_row_cell_id' title="На папку аккаунта Yandex должны быть предоставлены права доступа ai.languageModels.user сервису YandexGPT">
+          ID папки Yandex
+        </div>
+        <div class='table_row_cell table_row_cell_connect_param_value' >
+          <input type="text" name="generate_dlg_API_folder" id="generate_dlg_API_folder" data-mini="true" value="">
+        </div>
+      </div>
+      <div class="table_row">
+        <div class='table_row_cell table_row_cell_id'>
+          Количество требуемых функций
+        </div>
+        <div class='table_row_cell table_row_cell_connect_param_value' >
+          <input type="text" name="generate_dlg_cnt_functions" id="generate_dlg_cnt_functions" data-mini="true" value="5">
+        </div>
+      </div>
+    </div>
+
+    <form>
+      <input id="filterTable-input" data-type="search">
+    </form>
+    <table data-role="table" id='functionsListHeader' data-filter="true" data-input="#filterTable-input" class="ui-responsive table_header">
+      <thead>
+      <tr>
+        <th data-priority="1">ЛКН</th>
+        <th data-priority="2">Функция</th>
+        <th data-priority="3">Описание</th>
+      </tr>
+      </thead>
+      <tbody id='functionsListTable'>
+
+      </tbody>
+    </table>
+    <div id='finalItems' class="ui-grid-solo">
+      <div class='ui-block-a'><input type="button" onclick='gotoComponentsList()' data-iconpos="left" data-icon="back" value="Назад к списку систем"></div>
+    </div><!-- /grid-a -->
+  </div><!-- /content -->
+</div><!-- /page -->
+</body>
+</html>

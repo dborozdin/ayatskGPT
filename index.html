@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery_mobile/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="jquery_mobile/jquery.js"></script>
+	<script src="jquery_mobile/jquery.blockUI.js"></script>
+	<script src="jquery_mobile/jquery.mobile-1.4.5.js"></script>
+	<script src="jquery_mobile/jquery.ui.widget.js"></script>
+	<script src="jquery_mobile/jquery.iframe-transport.js"></script>
+	<script src="jquery_mobile/jquery.fileupload.js"></script>
+
+	<script src="js/apl_js_api_core.js"></script>
+	<script src="js/apl_js_api_business_logic.js"></script>
+	<script src="js/apl_utils.js"></script>
+
+	<script src="js/download.js"></script>
+	<script src="js/yandexGPT.js"></script>
+	<script src="js/functions_list.js"></script>
+	<script src="js/qrcode.min.js"></script>
+	<script src="js/qr_reader.js"></script>
+	<script src="js/jsQR.js"></script>
+	<script src="js/failure.js"></script>
+	<script src="js/final_item.js"></script>
+	<script src="js/failures_list.js"></script>
+	<script src="js/failure_documents.js"></script>
+	<script src="js/component.js"></script>
+	<script src="js/final_items_list.js"></script>
+	<script src="js/components_list.js"></script>
+
+	<script src="js/navigation.js"></script>
+	<script src="js/connect.js"></script>
+	<script src="js/index.js"></script>
+
+	<title>Applied Logistics REST API Demo</title>
+</head>
+<body class="pageBody">
+	<div id="fiList" data-role="page">
+		<div data-role="header">
+			<div class="page_header">
+				<div class="header_logo"><img src="images/cals_logo.png" alt="Прикладная логистика"></div>
+				<div class='header_text'>Выбор изделия</div>
+			</div>
+		</div><!-- /header -->
+		<div role="main" id="mainDiv">
+			<div id='btnsGrid' class="table_row">
+				<div class='table_row_cell_block'><input id="refreshFIList" type="button" onclick='getFinalItemTypesList()' data-inline="true"  data-iconpos="left" data-icon="refresh" value="Обновить перечень из БД"></div>
+			</div>
+			<div id='finalItemsListHeader' class="table_header">
+				  <div class="table_row_cell table_row_cell_id">Обозначение</div>
+				  <div class="table_row_cell table_row_cell_name">Наименование изделия</div>
+				  <div class="table_row_cell table_row_cell_button">Системы</div>
+			</div>
+			<div id='finalItemsList' class="table_row">
+			</div>
+			<div class="table_row">
+				<div class='table_row_cell table_row_cell_solo'>
+					<input type="button" onclick='goToConnectPage()' data-icon="gear" data-iconpos="left" value="Установить соединение с другой БД">
+				</div><!-- /grid-a -->
+			</div>
+		</div>
+	</div><!-- /page -->
+</body>
+</html>а

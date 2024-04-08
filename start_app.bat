@@ -1,0 +1,1 @@
+start chrome "http://localhost/ayatskGPT" --user-data-dir=%TMP%\temporary-chrome-profile-dir --disable-web-security --disable-site-isolation-trials

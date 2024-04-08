@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery_mobile/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="pageBody">
+	<div id="componentProps"  data-role="page">
+		<div data-role="header">
+			<div class="page_header">
+				<div class="header_logo"><img src="images/cals_logo.png" alt="Прикладная логистика"></div>
+				<div class='header_text'>Данные о составной части изделия</div>
+			</div>
+		</div><!-- /header -->
+
+		<div role="main">
+			<div id='finalItems' class="ui-grid-a">
+				<div class='ui-block-a' style="width:20%" ><div class='ui-bar ui-bar-a grid_header'>Обозначение</div></div>
+				<div class='ui-block-b' style="width:80%" ><div id='component_dlg_id' class='ui-bar ui-bar-a grid_item'></div></div>
+				<div class='ui-block-a' style="width:20%"><div class='ui-bar ui-bar-a grid_header'>Наименование</div></div>
+				<div class='ui-block-b' style="width:80%" ><div id='component_dlg_name' class='ui-bar ui-bar-a grid_item'></div></div>
+				<div class='ui-block-a' style="width:20%"><div  id='component_dlg_col_name' class='ui-bar ui-bar-a grid_header'>QR-код</div></div>
+				<div class='ui-block-b' style="width:80%" ><div id='component_dlg_qr' class='ui-bar ui-bar-a grid_item'></div></div>
+			</div><!-- /grid-a -->
+			<div id='componentsList' class="ui-grid-solo">
+				<div class='ui-block-a'><input type="button" onclick='gotoComponentsList()' data-iconpos="left" data-icon="back" value="Назад к списку составных частей"></div>
+			</div><!-- /grid-a -->
+		</div><!-- /content -->
+	</div><!-- /page -->
+</body>
+</html>

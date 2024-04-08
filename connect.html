@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery_mobile/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="jquery_mobile/jquery.js"></script>
+	<script src="jquery_mobile/jquery.blockUI.js"></script>
+	<script src="jquery_mobile/jquery.mobile-1.4.5.js"></script>
+	<script src="jquery_mobile/jquery.ui.widget.js"></script>
+	<script src="jquery_mobile/jquery.iframe-transport.js"></script>
+
+	<script src="js/apl_js_api_core.js"></script>
+	<script src="js/apl_js_api_business_logic.js"></script>
+	<script src="js/apl_utils.js"></script>
+
+	<script src="js/yandexGPT.js"></script>
+	<script src="js/functions_list.js"></script>
+	<script src="js/qrcode.min.js"></script>
+	<script src="js/jsQR.js"></script>
+	<script src="js/final_item.js"></script>
+	<script src="js/component.js"></script>
+	<script src="js/final_items_list.js"></script>
+	<script src="js/components_list.js"></script>
+
+	<script src="js/navigation.js"></script>
+	<script src="js/connect.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body class="pageBody">
+	<div id="connectDB"  data-role="page">
+		<div data-role="header">
+			<div class="page_header">
+				<div class="header_logo"><img src="images/cals_logo.png" alt="Прикладная логистика"></div>
+				<div class='header_text'>Соединение с БД</div>
+			</div>
+		</div><!-- /header -->
+
+		<div role="main">
+			<div id='connectFields'>
+				<div class="table_row">		
+					<div class='table_row_cell table_row_cell_id'>
+						Пользователь
+					</div>
+					<div class='table_row_cell table_row_cell_connect_param_value' >
+						<input type="text" name="connect_dlg_user" id="connect_dlg_user" data-mini="true" value="Administrator">
+					</div>
+				</div>	
+				<div class="table_row">
+					<div class='table_row_cell table_row_cell_id'>
+						Пароль
+					</div>
+					<div class='table_row_cell table_row_cell_connect_param_value' >
+						<input type="text" name="connect_dlg_password" id="connect_dlg_password" data-mini="true" value="">
+					</div>
+				</div>
+				<div class="table_row">
+					<div class='table_row_cell table_row_cell_id'>
+						Сервер
+					</div>
+					<div class='table_row_cell table_row_cell_connect_param_value'>
+						<div class='table_row_cell_connect_param_server' >
+							<input type="text" name="connect_dlg_server" id="connect_dlg_server" data-mini="true" value="localhost">
+						</div>
+						<div class='table_row_cell_connect_param_port_text' >
+						    порт:
+						</div>
+						<div class='table_row_cell_connect_param_port' >
+							<input type="text" name="connect_dlg_port" id="connect_dlg_port" data-mini="true">
+						</div>
+						<div class='table_row_cell_connect_param_db_list' >
+							<input type="button" onclick='UpdateDBList(true)' data-icon="grid" data-mini="true" data-iconpos="left" value="Обновить перечень БД">
+						</div>
+					</div>
+				</div>
+				<div class="table_row">
+					<div class='table_row_cell table_row_cell_id'>
+						БД
+					</div>
+					<div class='table_row_cell table_row_cell_connect_param_value' >
+						<select class="connect_select" name="connect_dlg_db" id="connect_dlg_db" data-mini="true">
+						</select>
+					</div>
+				</div>
+				<div class="table_row">
+					<div class='table_row_cell table_row_cell_solo'>
+						<input type="button" onclick='onConnect()' id="connectBtn" data-icon="gear" data-iconpos="left" value="Соединиться с БД">
+					</div><!-- /grid-a -->
+				</div>
+			</div>
+			
+		</div><!-- /content -->
+	</div><!-- /page -->
+</body>
+</html>
